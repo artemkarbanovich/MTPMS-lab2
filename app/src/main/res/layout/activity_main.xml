@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Калькулятор нормы потребления калорий"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="#70bf5d"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Пол:"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/headingText"/>
+
+    <Spinner
+        android:id="@+id/genderSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/ageText"
+        app:layout_constraintTop_toBottomOf="@+id/headingText"/>
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Возраст:"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/genderText"/>
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
+        app:layout_constraintLeft_toRightOf="@id/ageText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="лет"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
+        app:layout_constraintLeft_toRightOf="@id/age"/>
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Масса:"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/ageText"/>
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        app:layout_constraintLeft_toRightOf="@id/ageText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="кг"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        app:layout_constraintLeft_toRightOf="@id/weight"/>
+
+    <TextView
+        android:id="@+id/heightText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Рост:"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/weightText"/>
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        app:layout_constraintLeft_toRightOf="@id/ageText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="см"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        app:layout_constraintLeft_toRightOf="@id/height"/>
+
+    <TextView
+        android:id="@+id/physicalActivityText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Физическая активность (раз/неделя):"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/heightText"/>
+
+    <RadioGroup
+        android:id="@+id/physicalActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/physicalActivityText">
+
+        <RadioButton android:id="@+id/zeroPerWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="13.5sp"/>
+        <RadioButton android:id="@+id/oneThreePerWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1-3"
+            android:textSize="13.5sp"/>
+        <RadioButton android:id="@+id/threeFivePerWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3-5"
+            android:textSize="13.5sp"/>
+        <RadioButton android:id="@+id/sixSevenPerWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6-7"
+            android:textSize="13.5sp"/>
+        <RadioButton android:id="@+id/sevenPerWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="13.5sp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Рассчитать"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/physicalActivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="CalculateCalories"/>
+
+    <TextView
+        android:id="@+id/calculatedCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
